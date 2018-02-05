@@ -26,6 +26,6 @@ app.use(function(err, req, res, next) {
    })
 });
 
-app.listen(CONFIG.port, CONFIG.ip, function(){
+app.listen(CONFIG.port, function(){
     console.log('Server is runing on ', CONFIG.port);
 });
