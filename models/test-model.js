@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('todo', {
+  return sequelize.define('test-model', {
     description: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -9,7 +9,8 @@ module.exports = function(sequelize, DataTypes) {
     },
     completed: {
       type: DataTypes.BOOLEAN,
-      allowNull: false
+      allowNull: false,
+      defaultValue: false
     }
   });
 };

@@ -3,8 +3,14 @@ CONFIG = {};
 CONFIG.port = process.env.PORT || 3000;
 CONFIG.ip = process.env.IP || 'localhost';
 
-CONFIG.storage = __basedir + '/data/test.sqlite';
-CONFIG.model = __basedir + '/models/';
+CONFIG.base = process.env.PWD ? process.env.PWD : process.cwd();
 
-//module.exports = CONFIG
+CONFIG.db_host = process.env.IP || 'localhost';
+CONFIG.db_dialect = 'sqlite';
+CONFIG.db_storage = CONFIG.base + '/data/db-dev.sqlite';
+CONFIG.db_name = undefined; 
+CONFIG.db_user = undefined;
+CONFIG.db_password = undefined;
+
+
 

@@ -8,13 +8,18 @@
     "npm": "5.6.0"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "watch": "node node_modules/.bin/nodemon index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "sequelize": "^3.5.1",
     "sqlite3": "^3.1.13"
+  },
+  "devDependencies": {
+    "nodemon": "^1.15.0"
   }
 }

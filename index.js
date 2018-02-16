@@ -1,20 +1,23 @@
 'use strict';
-global.__basedir = __dirname;
 
 require("./config/config");
 
 const express = require('express');
 const app = express();
-var db = require('./db/db.js');
-var v1 = require('./routes/v1');
+const bodyParser = require('body-parser');
+const db = require('./models/index.js');
+const v1 = require('./routes/v1');
 
+
+app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
    res.statusCode = 200;
    res.json({status: "success", message: "Wine tasting API", data: {}});
 });
 
-app.use('/v1', v1)
+app.use('/v1', v1);
+
 
 // Catch 404 and forward to error handler
 app.use(function(req, res, next){

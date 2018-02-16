@@ -1,9 +1,16 @@
-var express = require('express');
-var router = express.Router();
+const  express = require('express');
+const router = express.Router();
 
 
 router.get('/', function(req, res) {
-  res.send('Hello');
+  res.send('Hellouu');
+});
+
+// TEST ROUTE
+// POST /test
+router.post('/test', (req, res) => {
+  var body = req.body;
+  res.json({status: "success", message: "Wine tasting API", data: body });
 })
 
 
